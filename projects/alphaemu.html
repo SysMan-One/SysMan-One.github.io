@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="description" content="Эмулятор DEC AlphaServer ES40: OpenVMS V8.3 Alpha загружается без изменений.">
+<title>AlphaEmu - StarLet Squad</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="top"><div class="wrap">
+<a class="brand" href="../index.html">StarLet Squad</a>
+<nav><a href="../index.html#flagships">Флагманы</a><a href="../index.html#ecosystem">Экосистема</a><a href="../open.html">Открытые проекты</a><a href="../about.html">О проекте</a></nav>
+</div></header>
+<main class="wrap">
+<p class="crumb"><a href="../index.html">Главная</a> / AlphaEmu</p>
+<section class="hero" style="padding-top:20px">
+<div><span class="tag flagt">флагман</span> <span class="tag">Эмуляция</span></div>
+<h1>AlphaEmu</h1>
+<p>Эмулятор DEC AlphaServer ES40: OpenVMS V8.3 Alpha загружается без изменений.</p>
+</section>
+<table>
+<tr><th>Версия</th><td>1.00.47 (последний собранный комплект)</td></tr>
+<tr><th>Статус</th><td>Активная разработка</td></tr>
+<tr><th>Платформы</th><td>Linux x86-64 (с JIT); aarch64 (интерпретатор)</td></tr>
+<tr><th>Лицензия</th><td>уточняется</td></tr>
+<tr><th>Для кого</th><td>Тем, кто хочет запускать OpenVMS Alpha без железа: энтузиастам, разработчикам и сопровождающим старого ПО.</td></tr>
+</table>
+<h2>Что это</h2><p>AlphaEmu - системный эмулятор DEC Alpha EV6 (21264) с чипсетом Tsunami 21272, написанный на C. OpenVMS V8.3 Alpha загружается на нём без изменений: с диска IDE или SCSI, с компакт-диска, по сети (MOP). Гость работает в сети, в VMScluster, с DECwindows, на одном-четырёх процессорах.</p><p>Прошивка DEC не нужна: по умолчанию машину ведут собственная консоль эмулятора (приглашение P00&gt;&gt;&gt;) и собственный PALcode OpenVMS, написанный на C. Консоль SRM остаётся как вариант.</p><p>Смоделированы: IDE и SCSI-диски (NCR 53C810, QLogic ISP1040), лента TZ89, сетевые адаптеры DE500, Intel 82540EM и DEGXA-TA. Есть чекпойнты всей машины, SMP с потоком хоста на каждый vCPU и JIT гостевого кода в x86-64.</p>
+<h2>Зачем</h2><p>Сохранить работоспособными системы на OpenVMS, когда железо кончилось. Эмулятор написан независимо, для совместимости: в нём нет кода OpenVMS, консоли SRM и PALcode DEC. Дистрибутив OpenVMS и лицензии на него пользователь получает у их владельцев сам.</p>
+<h2>Quick start <small class="tag">Сборка и запуск</small></h2>
+<pre><code>make                 # нужен установленный StarLet (/usr/local; иначе make STARLET=&lt;prefix&gt;)
+make test            # конформанс-тесты модулей, без ROM и дисков
+taskset -c &lt;ядро&gt; ./alphaemu tools/alphaemu-native.cfg
+telnet 127.0.0.1 4021    # консоль OPA0, если console.port = 4021</code></pre>
+<p class="src">Источник: AlphaEmu/README.md; ключи конфигурации - в User&#x27;s Guide (doc/alphaemu_users_guide.md)</p>
+<h2>Скачать</h2><p>Двоичные комплекты (alphaemu-&lt;rev&gt;-x86_64 / aarch64 .tar.gz + .sha256) собираются командой <code>make binkit</code>. Где они будут выложены - уточняется.</p>
+<h2>Исходники и ссылки</h2><ul><li>Ссылки на исходники уточняются.</li></ul>
+
+</main>
+<footer><div class="wrap">Freeware-проекты StarLet Squad и Ruslan R. Laishev (AKA: BadAss SysMan). Все названия продуктов принадлежат их владельцам. <a href="../about.html">Условия и обратная связь</a>.</div></footer>
+</body>
+</html>

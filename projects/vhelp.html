@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="description" content="Справочная подсистема в стиле OpenVMS: библиотекарь Markdown и браузер.">
+<title>HELP (vHELP) - StarLet Squad</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="top"><div class="wrap">
+<a class="brand" href="../index.html">StarLet Squad</a>
+<nav><a href="../index.html#flagships">Флагманы</a><a href="../index.html#ecosystem">Экосистема</a><a href="../open.html">Открытые проекты</a><a href="../about.html">О проекте</a></nav>
+</div></header>
+<main class="wrap">
+<p class="crumb"><a href="../index.html">Главная</a> / HELP (vHELP)</p>
+<section class="hero" style="padding-top:20px">
+<div><span class="tag">экосистема</span> <span class="tag">Linux-утилиты</span></div>
+<h1>HELP (vHELP)</h1>
+<p>Справочная подсистема в стиле OpenVMS: библиотекарь Markdown и браузер.</p>
+</section>
+<table>
+<tr><th>Версия</th><td>X01-35</td></tr>
+<tr><th>Статус</th><td>Активная разработка</td></tr>
+<tr><th>Платформы</th><td>Linux</td></tr>
+<tr><th>Лицензия</th><td>Apache License 2.0</td></tr>
+<tr><th>Для кого</th><td>Авторам утилит командной строки, которым нужна иерархическая справка HELP, как в OpenVMS.</td></tr>
+</table>
+<h2>Что это</h2><p>vhelptran переводит Markdown в библиотеку справки, vhelp ходит по ней по темам. Обратная операция (/EXTRACT) возвращает текст, и после первого прохода цикл извлечь-перевести стабилен.</p>
+<h2>Зачем</h2><p>Все наши пакеты поставляют справку через неё.</p>
+<h2>Quick start <small class="tag">Пример</small></h2>
+<pre><code>vhelptran doc/helplib.md /OUTPUT=helplib.hlb /IDENT=X-01
+vhelp submit /after
+vhelptran /EXTRACT helplib.hlb /KEY=&quot;VHELPTRAN SOURCE FORMAT&quot;</code></pre>
+<p class="src">Источник: vHELP/README.md</p>
+<h2>Скачать</h2><p>Выпуски по тегам.</p>
+<h2>Исходники и ссылки</h2><ul><li><a href="https://github.com/SysMan-One/vHELP">Исходники (GitHub)</a></li><li><a href="https://codeberg.org/SysManOne/vHELP">Исходники (Codeberg)</a></li></ul>
+
+</main>
+<footer><div class="wrap">Freeware-проекты StarLet Squad и Ruslan R. Laishev (AKA: BadAss SysMan). Все названия продуктов принадлежат их владельцам. <a href="../about.html">Условия и обратная связь</a>.</div></footer>
+</body>
+</html>

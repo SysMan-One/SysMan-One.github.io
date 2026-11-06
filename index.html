@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="description" content="Витрина freeware-проектов: AlphaEmu, BroProxy и экосистема утилит.">
+<title>StarLet Squad - свободные программы</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="top"><div class="wrap">
+<a class="brand" href="index.html">StarLet Squad</a>
+<nav><a href="index.html#flagships">Флагманы</a><a href="index.html#ecosystem">Экосистема</a><a href="open.html">Открытые проекты</a><a href="about.html">О проекте</a></nav>
+</div></header>
+<main class="wrap">
+<section class="hero">
+<h1>Свободные программы для тех, кто ценит маленькое, понятное и проверяемое.</h1>
+<p>Эмулятор DEC Alpha, на котором загружается OpenVMS, прокси-сервер для маленьких Linux-устройств и экосистема утилит вокруг них: сеть, резервные копии, редакторы, библиотеки. Исходный код открыт, документация по-русски и по-английски.</p>
+</section>
+<h2 id="flagships">Флагманы <small class="tag">flagships</small></h2>
+<div class="flags"><article class="card flag">
+<div><span class="tag flagt">флагман</span> <span class="tag">Эмуляция</span></div>
+<h3><a href="projects/alphaemu.html">AlphaEmu</a></h3>
+<p class="one">Эмулятор DEC AlphaServer ES40: OpenVMS V8.3 Alpha загружается без изменений.</p>
+<div class="meta"><span>Активная разработка</span><span>Linux x86-64 (с JIT); aarch64 (интерпретатор)</span><span>лицензия уточняется</span></div>
+<div class="links"><a href="projects/alphaemu.html">Подробнее</a></div>
+</article><article class="card flag">
+<div><span class="tag flagt">флагман</span> <span class="tag">Сеть</span></div>
+<h3><a href="projects/broproxy.html">BroProxy</a></h3>
+<p class="one">Прокси-сервер SOCKS4/5, HTTP и HTTPS (CONNECT); один статический файл для x86, ARM и MIPS.</p>
+<div class="meta"><span>Активная разработка, выпуски по тегам</span><span>Linux: x86_64, armhf, arm64, mips, mipsel, mips64el; Raspberry Pi, OpenWrt</span><span>Apache License 2.0</span></div>
+<div class="links"><a href="projects/broproxy.html">Подробнее</a></div>
+</article></div>
+<h2 id="ecosystem">Экосистема <small class="tag">ecosystem</small></h2>
+<div class="grid"><article class="card">
+<div><span class="tag">Сеть</span> <span class="tag">вокруг BroProxy</span></div>
+<h3><a href="projects/broagent.html">BroAgent</a></h3>
+<p class="one">Агент обратного соединения для BroProxy: машина за NAT сама звонит прокси.</p>
+<div class="meta"><span>Активная разработка (в одном репозитории с BroProxy)</span><span>Linux: те же процессоры, что у BroProxy</span><span>Apache License 2.0</span></div>
+<div class="links"><a href="projects/broagent.html">Подробнее</a></div>
+</article><article class="card">
+<div><span class="tag">OpenVMS</span> <span class="tag">вокруг AlphaEmu</span></div>
+<h3><a href="projects/mscp-hub.html">MSCP-Hub</a></h3>
+<p class="one">MSCP-сервер дисков для узлов OpenVMS, работающий на Linux.</p>
+<div class="meta"><span>Активная разработка</span><span>Linux, ядро 5.10+ (io_uring); Raspberry Pi, NaPi-C</span><span>GNU GPL v3</span></div>
+<div class="links"><a href="projects/mscp-hub.html">Подробнее</a> <a href="https://github.com/SysMan-One/MSCP-Hub">Исходники (GitHub)</a></div>
+</article><article class="card">
+<div><span class="tag">OpenVMS</span> <span class="tag">вокруг AlphaEmu</span></div>
+<h3><a href="projects/yavterm.html">yaVTERM</a></h3>
+<p class="one">Небольшой шифрованный терминальный туннель для OpenVMS, замена SSH.</p>
+<div class="meta"><span>Рабочий, развивается</span><span>Клиент - Linux; сервер - OpenVMS Alpha (и I64)</span><span>Apache License 2.0</span></div>
+<div class="links"><a href="projects/yavterm.html">Подробнее</a></div>
+</article><article class="card">
+<div><span class="tag">Сеть</span></div>
+<h3><a href="projects/yavna.html">yaVNA</a></h3>
+<p class="one">Полносвязная VPN в пространстве пользователя: Linux, Windows, Android; трафик похож на QUIC/HTTPS.</p>
+<div class="meta"><span>Рабочая сеть из 14 узлов с октября 2026</span><span>Linux x86_64/aarch64, Android arm64 (API 29+), Windows 10+ x64 (клиентский узел)</span><span>Apache License 2.0</span></div>
+<div class="links"><a href="projects/yavna.html">Подробнее</a> <a href="https://codeberg.org/SysManOne/yaVNA">Исходники (Codeberg)</a></div>
+</article><article class="card">
+<div><span class="tag">OpenVMS</span></div>
+<h3><a href="projects/yadx.html">yaDX</a></h3>
+<p class="one">DX - полноэкранный файловый менеджер для OpenVMS, издание 2026 года.</p>
+<div class="meta"><span>Поддерживается</span><span>OpenVMS Alpha и I64 (проверено: V8.3 Alpha, V8.4 I64)</span><span>GNU GPL v2 или новее</span></div>
+<div class="links"><a href="projects/yadx.html">Подробнее</a> <a href="https://codeberg.org/SysManOne/yaDX">Исходники и Releases (Codeberg)</a></div>
+</article><article class="card">
+<div><span class="tag">OpenVMS</span></div>
+<h3><a href="projects/yadcx.html">yaDCX</a></h3>
+<p class="one">Самораспаковывающиеся комплекты для OpenVMS: один файл .BCK становится одной программой .EXE.</p>
+<div class="meta"><span>Поддерживается</span><span>OpenVMS Alpha и I64</span><span>Apache License 2.0</span></div>
+<div class="links"><a href="projects/yadcx.html">Подробнее</a> <a href="https://codeberg.org/SysManOne/yaDCX">Исходники (Codeberg)</a></div>
+</article><article class="card">
+<div><span class="tag">OpenVMS</span></div>
+<h3><a href="projects/vtun.html">vTUN</a></h3>
+<p class="one">Сетевое устройство типа tun для OpenVMS Alpha.</p>
+<div class="meta"><span>Рабочий</span><span>OpenVMS Alpha</span><span>Apache License 2.0</span></div>
+<div class="links"><a href="projects/vtun.html">Подробнее</a></div>
+</article><article class="card">
+<div><span class="tag">Linux-утилиты</span></div>
+<h3><a href="projects/vbackup.html">vBACKUP</a></h3>
+<p class="one">Утилита saveset-ов в духе OpenVMS BACKUP для Linux: сохранить, восстановить, сверить.</p>
+<div class="meta"><span>Активная разработка</span><span>Linux; образы для Windows (MinGW-w64)</span><span>Apache License 2.0</span></div>
+<div class="links"><a href="projects/vbackup.html">Подробнее</a> <a href="https://github.com/SysMan-One/vBACKUP">Исходники (GitHub)</a></div>
+</article><article class="card">
+<div><span class="tag">Библиотеки</span></div>
+<h3><a href="projects/starlet.html">StarLet</a></h3>
+<p class="one">Небольшая библиотека на C со строительными блоками в духе OpenVMS: общая основа наших пакетов.</p>
+<div class="meta"><span>Активная разработка</span><span>Linux, Windows (MinGW); x86-64 и ARMv8</span><span>Apache License 2.0</span></div>
+<div class="links"><a href="projects/starlet.html">Подробнее</a> <a href="https://github.com/SysMan-One/utility_routines">Исходники (GitHub, utility_routines)</a></div>
+</article><article class="card">
+<div><span class="tag">Linux-утилиты</span></div>
+<h3><a href="projects/vhelp.html">HELP (vHELP)</a></h3>
+<p class="one">Справочная подсистема в стиле OpenVMS: библиотекарь Markdown и браузер.</p>
+<div class="meta"><span>Активная разработка</span><span>Linux</span><span>Apache License 2.0</span></div>
+<div class="links"><a href="projects/vhelp.html">Подробнее</a> <a href="https://github.com/SysMan-One/vHELP">Исходники (GitHub)</a></div>
+</article><article class="card">
+<div><span class="tag">Linux-утилиты</span></div>
+<h3><a href="projects/batch.html">BATCH</a></h3>
+<p class="one">Подсистема пакетных заданий для shell-скриптов - аналог SUBMIT и очередей OpenVMS.</p>
+<div class="meta"><span>Активная разработка</span><span>Linux (systemd или SysV/OpenRC)</span><span>Apache License 2.0</span></div>
+<div class="links"><a href="projects/batch.html">Подробнее</a> <a href="https://github.com/SysMan-One/BATCH">Исходники (GitHub)</a></div>
+</article><article class="card">
+<div><span class="tag">Linux-утилиты</span></div>
+<h3><a href="projects/search.html">SEARCH</a></h3>
+<p class="one">SEARCH в стиле OpenVMS: показывает записи файлов с заданными строками.</p>
+<div class="meta"><span>Поддерживается</span><span>Linux</span><span>Apache License 2.0</span></div>
+<div class="links"><a href="projects/search.html">Подробнее</a> <a href="https://codeberg.org/SysManOne/search">Исходники (Codeberg)</a></div>
+</article><article class="card">
+<div><span class="tag">Linux-утилиты</span></div>
+<h3><a href="projects/skshow.html">skshow</a></h3>
+<p class="one">Нано-утилита: TCP/UDP-сокеты системы со счётчиками байт и пакетов.</p>
+<div class="meta"><span>Поддерживается</span><span>Linux</span><span>Apache License 2.0</span></div>
+<div class="links"><a href="projects/skshow.html">Подробнее</a></div>
+</article><article class="card">
+<div><span class="tag">Linux-утилиты</span></div>
+<h3><a href="projects/yanetcheck.html">yaNetCheck</a></h3>
+<p class="one">Проверка сетевого пути потоком UDP-датаграмм: потери, дубликаты, перестановки.</p>
+<div class="meta"><span>Поддерживается</span><span>Linux (glibc), x86_64 и aarch64</span><span>Apache License 2.0</span></div>
+<div class="links"><a href="projects/yanetcheck.html">Подробнее</a></div>
+</article><article class="card">
+<div><span class="tag">Linux-утилиты</span></div>
+<h3><a href="projects/yatpu.html">yaTPU</a></h3>
+<p class="one">Лёгкий текстовый редактор в духе DEC TPU/EVE: чистый C, termios, без ncurses.</p>
+<div class="meta"><span>Поддерживается</span><span>Linux (терминал VT100/xterm)</span><span>Apache License 2.0</span></div>
+<div class="links"><a href="projects/yatpu.html">Подробнее</a></div>
+</article><article class="card">
+<div><span class="tag">Сеть</span></div>
+<h3><a href="projects/yadnspxy.html">yaDNSPxy</a></h3>
+<p class="one">Кэширующий DNS-форвардер для встраиваемого роутера: наружу по DoT, DoH, DoQ или обычному UDP/TCP.</p>
+<div class="meta"><span>В разработке</span><span>OpenWrt, NapiLinux (Linux)</span><span>Apache License 2.0</span></div>
+<div class="links"><a href="projects/yadnspxy.html">Подробнее</a></div>
+</article></div>
+
+</main>
+<footer><div class="wrap">Freeware-проекты StarLet Squad и Ruslan R. Laishev (AKA: BadAss SysMan). Все названия продуктов принадлежат их владельцам. <a href="about.html">Условия и обратная связь</a>.</div></footer>
+</body>
+</html>

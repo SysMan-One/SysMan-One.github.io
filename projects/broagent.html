@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="description" content="Агент обратного соединения для BroProxy: машина за NAT сама звонит прокси.">
+<title>BroAgent - StarLet Squad</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="top"><div class="wrap">
+<a class="brand" href="../index.html">StarLet Squad</a>
+<nav><a href="../index.html#flagships">Флагманы</a><a href="../index.html#ecosystem">Экосистема</a><a href="../open.html">Открытые проекты</a><a href="../about.html">О проекте</a></nav>
+</div></header>
+<main class="wrap">
+<p class="crumb"><a href="../index.html">Главная</a> / BroAgent</p>
+<section class="hero" style="padding-top:20px">
+<div><span class="tag">экосистема</span> <span class="tag">Сеть</span></div>
+<h1>BroAgent</h1>
+<p>Агент обратного соединения для BroProxy: машина за NAT сама звонит прокси.</p>
+</section>
+<table>
+<tr><th>Версия</th><td>X.01-10ECO07 (по README)</td></tr>
+<tr><th>Статус</th><td>Активная разработка (в одном репозитории с BroProxy)</td></tr>
+<tr><th>Платформы</th><td>Linux: те же процессоры, что у BroProxy</td></tr>
+<tr><th>Лицензия</th><td>Apache License 2.0</td></tr>
+<tr><th>Для кого</th><td>Тем, чья машина с выходом в Интернет находится за NAT, файрволом или мобильным оператором и не принимает входящих соединений.</td></tr>
+</table>
+<h2>Что это</h2><p>BroAgent сам открывает все соединения к BroProxy; на машине агента не открывается ни один порт. Если входящее правило возможно, агент не нужен: хватит записи в файле bproxy.peers на стороне прокси.</p>
+<h2>Зачем</h2><p>Дать прокси выход через узел, до которого нельзя дозвониться.</p>
+<h2>Quick start <small class="tag">Установка</small></h2>
+<pre><code>apt install ./bagent_&lt;версия&gt;_arm64.deb     # имя файла - как в Releases
+# поправьте /etc/bagent/ (пароли в образцах - &lt;password&gt;), затем запустите сервис</code></pre>
+<p class="src">Источник: BroTwins/README.md; подробно - bagent/README_EN.md; точные команды запуска - уточняется</p>
+<h2>Скачать</h2><p>Пакеты .deb, .rpm, .ipk, .apk и .tar.gz для x86_64, ARM и MIPS; место публикации уточняется.</p>
+<h2>Исходники и ссылки</h2><ul><li>Ссылки на исходники уточняются.</li></ul>
+
+</main>
+<footer><div class="wrap">Freeware-проекты StarLet Squad и Ruslan R. Laishev (AKA: BadAss SysMan). Все названия продуктов принадлежат их владельцам. <a href="../about.html">Условия и обратная связь</a>.</div></footer>
+</body>
+</html>
