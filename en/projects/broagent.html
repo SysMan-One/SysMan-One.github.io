@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="description" content="The connection-back agent of BroProxy: a machine behind NAT calls the proxy itself.">
+<title>BroAgent - StarLet Squad</title>
+<link rel="alternate" hreflang="ru" href="../../projects/broagent.html">
+<link rel="alternate" hreflang="en" href="../../en/projects/broagent.html">
+<link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+<header class="top"><div class="wrap">
+<a class="brand" href="../../en/index.html">StarLet Squad</a>
+<nav><a href="../../en/index.html#flagships">Flagships</a><a href="../../en/index.html#ecosystem">Ecosystem</a><a href="../../en/open.html">Open projects</a><a href="../../en/about.html">About</a><a class="lang" href="../../projects/broagent.html" hreflang="ru" lang="ru">Русский</a></nav>
+</div></header>
+<main class="wrap">
+<p class="crumb"><a href="../index.html">Home</a> / BroAgent</p>
+<section class="hero" style="padding-top:20px">
+<div><span class="tag">ecosystem</span> <span class="tag">Networking</span></div>
+<h1>BroAgent</h1>
+<p>The connection-back agent of BroProxy: a machine behind NAT calls the proxy itself.</p>
+</section>
+<table>
+<tr><th>Version</th><td>X.01-10ECO07 (per README)</td></tr>
+<tr><th>Status</th><td>Active development (in one repository with BroProxy)</td></tr>
+<tr><th>Platforms</th><td>Linux: the same processors as BroProxy</td></tr>
+<tr><th>Licence</th><td>Apache License 2.0</td></tr>
+<tr><th>For whom</th><td>Those whose machine with Internet access is behind NAT, a firewall or a mobile operator and accepts no incoming connections.</td></tr>
+</table>
+<h2>What it is</h2><p>BroAgent opens every connection to BroProxy itself; no port is opened on the agent&#x27;s machine. If an incoming rule is possible, the agent is not needed: a line in the bproxy.peers file on the proxy side is enough.</p>
+<h2>Why</h2><p>To give the proxy a way out through a node that cannot be called.</p>
+<h2>Quick start <small class="tag">Installation</small></h2>
+<pre><code>apt install ./bagent_&lt;version&gt;_arm64.deb     # the file name as in Releases
+# tune /etc/bagent/ (the samples say &lt;password&gt;), then start the service</code></pre>
+<p class="src">Source: BroTwins/README.md; in detail - bagent/README_EN.md</p>
+<h2>Download</h2><p>Packages .deb, .rpm, .ipk, .apk and .tar.gz for x86_64, ARM and MIPS; where they are published is to be announced.</p>
+<h2>Source and links</h2><ul><li>Source links are to be announced.</li></ul>
+
+</main>
+<footer><div class="wrap">Freeware projects of StarLet Squad and Ruslan R. Laishev (AKA: BadAss SysMan). All product names belong to their owners. <a href="../../en/about.html">Terms and feedback</a>.</div></footer>
+</body>
+</html>

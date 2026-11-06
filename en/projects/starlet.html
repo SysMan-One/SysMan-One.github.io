@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="description" content="A small C library of OpenVMS-style building blocks: the common base of our packages.">
+<title>StarLet - StarLet Squad</title>
+<link rel="alternate" hreflang="ru" href="../../projects/starlet.html">
+<link rel="alternate" hreflang="en" href="../../en/projects/starlet.html">
+<link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+<header class="top"><div class="wrap">
+<a class="brand" href="../../en/index.html">StarLet Squad</a>
+<nav><a href="../../en/index.html#flagships">Flagships</a><a href="../../en/index.html#ecosystem">Ecosystem</a><a href="../../en/open.html">Open projects</a><a href="../../en/about.html">About</a><a class="lang" href="../../projects/starlet.html" hreflang="ru" lang="ru">Русский</a></nav>
+</div></header>
+<main class="wrap">
+<p class="crumb"><a href="../index.html">Home</a> / StarLet</p>
+<section class="hero" style="padding-top:20px">
+<div><span class="tag">ecosystem</span> <span class="tag">Libraries</span></div>
+<h1>StarLet</h1>
+<p>A small C library of OpenVMS-style building blocks: the common base of our packages.</p>
+</section>
+<table>
+<tr><th>Version</th><td>1.7.x (the latest tag v1.7.1; 1.7.2 in progress)</td></tr>
+<tr><th>Status</th><td>Active development</td></tr>
+<tr><th>Platforms</th><td>Linux, Windows (MinGW); x86-64 and ARMv8</td></tr>
+<tr><th>Licence</th><td>Apache License 2.0</td></tr>
+<tr><th>For whom</th><td>C developers who need logging, message catalogues, command line parsing and FAO.</td></tr>
+</table>
+<h2>What it is</h2><p>Portable C11. Modules: utility_routines (the $LOG log, $PUTMSG_FAO message catalogues, ASCIC strings, base64, CRC-32, option parsing, queues, patterns), avproto (a binary TLV protocol), cli_routines (DCL-style command line parsing) and starlet (counterparts of OpenVMS system services: FAO formatting, binary time). The return status follows the OpenVMS convention: the low bit means success.</p>
+<h2>Why</h2><p>BroProxy, MSCP-Hub, AlphaEmu, yaVTERM, vHELP and the other packages depend on it.</p>
+<h2>Quick start <small class="tag">Using it from CMake</small></h2>
+<pre><code>add_subdirectory(external/utility_routines)
+add_executable(my_app main.c)
+target_link_libraries(my_app PRIVATE starlet)   # the headers come with the target</code></pre>
+<p class="src">Source: StarLet/README.md (a FetchContent variant is there too)</p>
+<h2>Download</h2><p>Shipped as StarLet-&lt;ident&gt;.tar.gz.</p>
+<h2>Source and links</h2><ul><li><a href="https://github.com/SysMan-One/utility_routines">Source (GitHub, utility_routines)</a></li></ul>
+
+</main>
+<footer><div class="wrap">Freeware projects of StarLet Squad and Ruslan R. Laishev (AKA: BadAss SysMan). All product names belong to their owners. <a href="../../en/about.html">Terms and feedback</a>.</div></footer>
+</body>
+</html>

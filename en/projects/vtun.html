@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="description" content="A tun-style network device for OpenVMS Alpha.">
+<title>vTUN - StarLet Squad</title>
+<link rel="alternate" hreflang="ru" href="../../projects/vtun.html">
+<link rel="alternate" hreflang="en" href="../../en/projects/vtun.html">
+<link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+<header class="top"><div class="wrap">
+<a class="brand" href="../../en/index.html">StarLet Squad</a>
+<nav><a href="../../en/index.html#flagships">Flagships</a><a href="../../en/index.html#ecosystem">Ecosystem</a><a href="../../en/open.html">Open projects</a><a href="../../en/about.html">About</a><a class="lang" href="../../projects/vtun.html" hreflang="ru" lang="ru">Русский</a></nav>
+</div></header>
+<main class="wrap">
+<p class="crumb"><a href="../index.html">Home</a> / vTUN</p>
+<section class="hero" style="padding-top:20px">
+<div><span class="tag">ecosystem</span> <span class="tag">OpenVMS</span></div>
+<h1>vTUN</h1>
+<p>A tun-style network device for OpenVMS Alpha.</p>
+</section>
+<table>
+<tr><th>Version</th><td>X-01-02</td></tr>
+<tr><th>Status</th><td>Working</td></tr>
+<tr><th>Platforms</th><td>OpenVMS Alpha</td></tr>
+<tr><th>Licence</th><td>Apache License 2.0</td></tr>
+<tr><th>For whom</th><td>Developers who need a program on OpenVMS to be the other end of a network interface (VPN and the like).</td></tr>
+</table>
+<h2>What it is</h2><p>On Linux a program opens /dev/net/tun and becomes the other end of a network interface. vTUN gives OpenVMS the same: packets sent to the interface (BE0, for example) reach the program, and packets the program writes enter the system as if they came from the network.</p>
+<h2>Why</h2><p>A base for VPNs and tunnels on OpenVMS.</p>
+<h2>Quick start <small class="tag">Build</small></h2>
+<pre><code>$ SET DEFAULT SYS$SYSDEVICE:[VTUN]
+$ @BUILD
+$ @TESTS</code></pre>
+<p class="src">Source: vTUN/README.md. The build needs three files from the licensed OpenVMS Alpha source listings</p>
+<h2>Download</h2><p>To be announced.</p>
+<h2>Source and links</h2><ul><li>Source links are to be announced.</li></ul>
+
+</main>
+<footer><div class="wrap">Freeware projects of StarLet Squad and Ruslan R. Laishev (AKA: BadAss SysMan). All product names belong to their owners. <a href="../../en/about.html">Terms and feedback</a>.</div></footer>
+</body>
+</html>

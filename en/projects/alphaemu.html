@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="description" content="A DEC AlphaServer ES40 emulator: OpenVMS V8.3 Alpha boots unmodified.">
+<title>AlphaEmu - StarLet Squad</title>
+<link rel="alternate" hreflang="ru" href="../../projects/alphaemu.html">
+<link rel="alternate" hreflang="en" href="../../en/projects/alphaemu.html">
+<link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+<header class="top"><div class="wrap">
+<a class="brand" href="../../en/index.html">StarLet Squad</a>
+<nav><a href="../../en/index.html#flagships">Flagships</a><a href="../../en/index.html#ecosystem">Ecosystem</a><a href="../../en/open.html">Open projects</a><a href="../../en/about.html">About</a><a class="lang" href="../../projects/alphaemu.html" hreflang="ru" lang="ru">Русский</a></nav>
+</div></header>
+<main class="wrap">
+<p class="crumb"><a href="../index.html">Home</a> / AlphaEmu</p>
+<section class="hero" style="padding-top:20px">
+<div><span class="tag flagt">flagship</span> <span class="tag">Emulation</span></div>
+<h1>AlphaEmu</h1>
+<p>A DEC AlphaServer ES40 emulator: OpenVMS V8.3 Alpha boots unmodified.</p>
+</section>
+<table>
+<tr><th>Version</th><td>1.00.47 (the latest kit built)</td></tr>
+<tr><th>Status</th><td>Active development</td></tr>
+<tr><th>Platforms</th><td>Linux x86-64 (with JIT); aarch64 (interpreter)</td></tr>
+<tr><th>Licence</th><td>licence to be announced</td></tr>
+<tr><th>For whom</th><td>Those who want to run OpenVMS Alpha without the hardware: enthusiasts, developers and the keepers of legacy software.</td></tr>
+</table>
+<h2>What it is</h2><p>AlphaEmu is a system emulator of the DEC Alpha EV6 (21264) with the Tsunami 21272 chipset, written in C. OpenVMS V8.3 Alpha boots on it unmodified: from an IDE or SCSI disk, from a CD, over the network (MOP). The guest works on the network, in a VMScluster, with DECwindows, on one to four processors.</p><p>No DEC firmware is needed: by default the machine is driven by the emulator&#x27;s own console (the P00&gt;&gt;&gt; prompt) and its own OpenVMS PALcode written in C. The SRM console remains an option.</p><p>Modelled: IDE and SCSI disks (NCR 53C810, QLogic ISP1040), the TZ89 tape, the DE500, Intel 82540EM and DEGXA-TA network adapters. There are whole-machine checkpoints, SMP with a host thread per vCPU and a JIT of the guest code into x86-64.</p>
+<h2>Why</h2><p>To keep OpenVMS systems running when the hardware is gone. The emulator is written independently, for compatibility: it contains no OpenVMS code, no SRM console and no DEC PALcode. The OpenVMS distribution and its licences are obtained by the user from their owners.</p>
+<h2>Quick start <small class="tag">Build and run</small></h2>
+<pre><code>make                 # needs StarLet installed (/usr/local; otherwise make STARLET=&lt;prefix&gt;)
+make test            # conformance tests of the modules, no ROM or disks needed
+taskset -c &lt;core&gt; ./alphaemu tools/alphaemu-native.cfg
+telnet 127.0.0.1 4021    # the OPA0 console, if console.port = 4021</code></pre>
+<p class="src">Source: AlphaEmu/README.md; the configuration keys are in the User&#x27;s Guide (doc/alphaemu_users_guide.md)</p>
+<h2>Download</h2><p>Binary kits (alphaemu-&lt;rev&gt;-x86_64 / aarch64 .tar.gz + .sha256) are built by <code>make binkit</code>. Where they will be published is to be announced.</p>
+<h2>Source and links</h2><ul><li>Source links are to be announced.</li></ul>
+
+</main>
+<footer><div class="wrap">Freeware projects of StarLet Squad and Ruslan R. Laishev (AKA: BadAss SysMan). All product names belong to their owners. <a href="../../en/about.html">Terms and feedback</a>.</div></footer>
+</body>
+</html>

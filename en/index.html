@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="description" content="Freeware projects: AlphaEmu, BroProxy, mbus-gw-t2r and an ecosystem of utilities.">
+<title>StarLet Squad - free software</title>
+<link rel="alternate" hreflang="ru" href="../index.html">
+<link rel="alternate" hreflang="en" href="../en/index.html">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="top"><div class="wrap">
+<a class="brand" href="../en/index.html">StarLet Squad</a>
+<nav><a href="../en/index.html#flagships">Flagships</a><a href="../en/index.html#ecosystem">Ecosystem</a><a href="../en/open.html">Open projects</a><a href="../en/about.html">About</a><a class="lang" href="../index.html" hreflang="ru" lang="ru">Русский</a></nav>
+</div></header>
+<main class="wrap">
+<section class="hero">
+<h1>Free software for those who value small, clear and verifiable things.</h1>
+<p>A DEC Alpha emulator that boots OpenVMS, a proxy server for small Linux devices, a MODBUS gateway and an ecosystem of utilities around them: networking, backups, editors, libraries. The source is open, the documentation is in Russian and English.</p>
+</section>
+<h2 id="flagships">Flagships</h2>
+<div class="flags"><article class="card flag">
+<div><span class="tag flagt">flagship</span> <span class="tag">Emulation</span></div>
+<h3><a href="projects/alphaemu.html">AlphaEmu</a></h3>
+<p class="one">A DEC AlphaServer ES40 emulator: OpenVMS V8.3 Alpha boots unmodified.</p>
+<div class="meta"><span>Active development</span><span>Linux x86-64 (with JIT); aarch64 (interpreter)</span><span>licence to be announced</span></div>
+<div class="links"><a href="projects/alphaemu.html">More</a></div>
+</article><article class="card flag">
+<div><span class="tag flagt">flagship</span> <span class="tag">Networking</span></div>
+<h3><a href="projects/broproxy.html">BroProxy</a></h3>
+<p class="one">A SOCKS4/5, HTTP and HTTPS (CONNECT) proxy server; one static file for x86, ARM and MIPS.</p>
+<div class="meta"><span>Active development, releases by tag</span><span>Linux: x86_64, armhf, arm64, mips, mipsel, mips64el; Raspberry Pi, OpenWrt</span><span>Apache License 2.0</span></div>
+<div class="links"><a href="projects/broproxy.html">More</a></div>
+</article></div>
+<h2 id="ecosystem">Ecosystem</h2>
+<div class="grid"><article class="card">
+<div><span class="tag">Networking</span> <span class="tag">around BroProxy</span></div>
+<h3><a href="projects/broagent.html">BroAgent</a></h3>
+<p class="one">The connection-back agent of BroProxy: a machine behind NAT calls the proxy itself.</p>
+<div class="meta"><span>Active development (in one repository with BroProxy)</span><span>Linux: the same processors as BroProxy</span><span>Apache License 2.0</span></div>
+<div class="links"><a href="projects/broagent.html">More</a></div>
+</article><article class="card">
+<div><span class="tag">OpenVMS</span> <span class="tag">around AlphaEmu</span></div>
+<h3><a href="projects/mscp-hub.html">MSCP-Hub</a></h3>
+<p class="one">An MSCP disk server for OpenVMS nodes, running on Linux.</p>
+<div class="meta"><span>Active development</span><span>Linux, kernel 5.10+ (io_uring); Raspberry Pi, NaPi-C</span><span>GNU GPL v3</span></div>
+<div class="links"><a href="projects/mscp-hub.html">More</a> <a href="https://github.com/SysMan-One/MSCP-Hub">Source (GitHub)</a></div>
+</article><article class="card">
+<div><span class="tag">OpenVMS</span> <span class="tag">around AlphaEmu</span></div>
+<h3><a href="projects/yavterm.html">yaVTERM</a></h3>
+<p class="one">A small encrypted terminal tunnel for OpenVMS, a replacement of SSH.</p>
+<div class="meta"><span>Working, evolving</span><span>Client - Linux; server - OpenVMS Alpha (and I64)</span><span>Apache License 2.0</span></div>
+<div class="links"><a href="projects/yavterm.html">More</a></div>
+</article><article class="card">
+<div><span class="tag">Networking</span></div>
+<h3><a href="projects/yavna.html">yaVNA</a></h3>
+<p class="one">A full-mesh user-space VPN: Linux, Windows, Android; the traffic looks like QUIC/HTTPS.</p>
+<div class="meta"><span>A working network of 14 nodes since October 2026</span><span>Linux x86_64/aarch64, Android arm64 (API 29+), Windows 10+ x64 (client node)</span><span>Apache License 2.0</span></div>
+<div class="links"><a href="projects/yavna.html">More</a> <a href="https://codeberg.org/SysManOne/yaVNA">Source (Codeberg)</a></div>
+</article><article class="card">
+<div><span class="tag">OpenVMS</span></div>
+<h3><a href="projects/yadx.html">yaDX</a></h3>
+<p class="one">DX - a full-screen file manager for OpenVMS, the 2026 edition.</p>
+<div class="meta"><span>Maintained</span><span>OpenVMS Alpha and I64 (checked: V8.3 Alpha, V8.4 I64)</span><span>GNU GPL v2 or later</span></div>
+<div class="links"><a href="projects/yadx.html">More</a> <a href="https://codeberg.org/SysManOne/yaDX">Source and Releases (Codeberg)</a></div>
+</article><article class="card">
+<div><span class="tag">OpenVMS</span></div>
+<h3><a href="projects/yadcx.html">yaDCX</a></h3>
+<p class="one">Self-extracting kits for OpenVMS: one .BCK file becomes one .EXE program.</p>
+<div class="meta"><span>Maintained</span><span>OpenVMS Alpha and I64</span><span>Apache License 2.0</span></div>
+<div class="links"><a href="projects/yadcx.html">More</a> <a href="https://codeberg.org/SysManOne/yaDCX">Source (Codeberg)</a></div>
+</article><article class="card">
+<div><span class="tag">OpenVMS</span></div>
+<h3><a href="projects/vtun.html">vTUN</a></h3>
+<p class="one">A tun-style network device for OpenVMS Alpha.</p>
+<div class="meta"><span>Working</span><span>OpenVMS Alpha</span><span>Apache License 2.0</span></div>
+<div class="links"><a href="projects/vtun.html">More</a></div>
+</article><article class="card">
+<div><span class="tag">Linux utilities</span></div>
+<h3><a href="projects/vbackup.html">vBACKUP</a></h3>
+<p class="one">An OpenVMS BACKUP style saveset utility for Linux: save, restore, verify.</p>
+<div class="meta"><span>Active development</span><span>Linux; Windows images (MinGW-w64)</span><span>Apache License 2.0</span></div>
+<div class="links"><a href="projects/vbackup.html">More</a> <a href="https://github.com/SysMan-One/vBACKUP">Source (GitHub)</a></div>
+</article><article class="card">
+<div><span class="tag">Libraries</span></div>
+<h3><a href="projects/starlet.html">StarLet</a></h3>
+<p class="one">A small C library of OpenVMS-style building blocks: the common base of our packages.</p>
+<div class="meta"><span>Active development</span><span>Linux, Windows (MinGW); x86-64 and ARMv8</span><span>Apache License 2.0</span></div>
+<div class="links"><a href="projects/starlet.html">More</a> <a href="https://github.com/SysMan-One/utility_routines">Source (GitHub, utility_routines)</a></div>
+</article><article class="card">
+<div><span class="tag">Linux utilities</span></div>
+<h3><a href="projects/vhelp.html">HELP (vHELP)</a></h3>
+<p class="one">An OpenVMS-style help subsystem: a Markdown librarian and a browser.</p>
+<div class="meta"><span>Active development</span><span>Linux</span><span>Apache License 2.0</span></div>
+<div class="links"><a href="projects/vhelp.html">More</a> <a href="https://github.com/SysMan-One/vHELP">Source (GitHub)</a></div>
+</article><article class="card">
+<div><span class="tag">Linux utilities</span></div>
+<h3><a href="projects/batch.html">BATCH</a></h3>
+<p class="one">A batch job subsystem for shell scripts - a counterpart of OpenVMS SUBMIT and queues.</p>
+<div class="meta"><span>Active development</span><span>Linux (systemd or SysV/OpenRC)</span><span>Apache License 2.0</span></div>
+<div class="links"><a href="projects/batch.html">More</a> <a href="https://github.com/SysMan-One/BATCH">Source (GitHub)</a></div>
+</article><article class="card">
+<div><span class="tag">Linux utilities</span></div>
+<h3><a href="projects/search.html">SEARCH</a></h3>
+<p class="one">OpenVMS-style SEARCH: shows the records of files containing the given strings.</p>
+<div class="meta"><span>Maintained</span><span>Linux</span><span>Apache License 2.0</span></div>
+<div class="links"><a href="projects/search.html">More</a> <a href="https://codeberg.org/SysManOne/search">Source (Codeberg)</a></div>
+</article><article class="card">
+<div><span class="tag">Linux utilities</span></div>
+<h3><a href="projects/skshow.html">skshow</a></h3>
+<p class="one">A nano utility: the TCP/UDP sockets of the system with byte and packet counters.</p>
+<div class="meta"><span>Maintained</span><span>Linux</span><span>Apache License 2.0</span></div>
+<div class="links"><a href="projects/skshow.html">More</a></div>
+</article><article class="card">
+<div><span class="tag">Linux utilities</span></div>
+<h3><a href="projects/yanetcheck.html">yaNetCheck</a></h3>
+<p class="one">Checking a network path with a stream of UDP datagrams: losses, duplicates, reordering.</p>
+<div class="meta"><span>Maintained</span><span>Linux (glibc), x86_64 and aarch64</span><span>Apache License 2.0</span></div>
+<div class="links"><a href="projects/yanetcheck.html">More</a></div>
+</article><article class="card">
+<div><span class="tag">Linux utilities</span></div>
+<h3><a href="projects/yatpu.html">yaTPU</a></h3>
+<p class="one">A light text editor in the spirit of DEC TPU/EVE: plain C, termios, no ncurses.</p>
+<div class="meta"><span>Maintained</span><span>Linux (VT100/xterm terminal)</span><span>Apache License 2.0</span></div>
+<div class="links"><a href="projects/yatpu.html">More</a></div>
+</article><article class="card">
+<div><span class="tag">Networking</span></div>
+<h3><a href="projects/yadnspxy.html">yaDNSPxy</a></h3>
+<p class="one">A caching DNS forwarder for an embedded router: upstream over DoT, DoH, DoQ or plain UDP/TCP.</p>
+<div class="meta"><span>In development</span><span>OpenWrt, NapiLinux (Linux)</span><span>Apache License 2.0</span></div>
+<div class="links"><a href="projects/yadnspxy.html">More</a></div>
+</article><article class="card">
+<div><span class="tag">Industrial</span></div>
+<h3><a href="projects/mbus-gw.html">mbus-gw-t2r</a></h3>
+<p class="one">A MODBUS TCP to RTU gateway for RS-485 and RS-232 lines: several devices per line, several TCP ports per line, a transparent RAW mode.</p>
+<div class="meta"><span>Released, evolving</span><span>Linux: amd64, arm64, mipsel, mips64el (.deb); OpenWrt 24.10 and 25.12 (.ipk, .apk); NaPi boards (RK3568J, RK3308)</span><span>Apache License 2.0</span></div>
+<div class="links"><a href="projects/mbus-gw.html">More</a> <a href="https://github.com/napilab/mbus-gw-t2r">Source and Releases (GitHub, NaPi Lab)</a></div>
+</article></div>
+
+</main>
+<footer><div class="wrap">Freeware projects of StarLet Squad and Ruslan R. Laishev (AKA: BadAss SysMan). All product names belong to their owners. <a href="../en/about.html">Terms and feedback</a>.</div></footer>
+</body>
+</html>

@@ -6,12 +6,14 @@
 <meta name="color-scheme" content="light dark">
 <meta name="description" content="Эмулятор DEC AlphaServer ES40: OpenVMS V8.3 Alpha загружается без изменений.">
 <title>AlphaEmu - StarLet Squad</title>
+<link rel="alternate" hreflang="ru" href="../projects/alphaemu.html">
+<link rel="alternate" hreflang="en" href="../en/projects/alphaemu.html">
 <link rel="stylesheet" href="../assets/style.css">
 </head>
 <body>
 <header class="top"><div class="wrap">
 <a class="brand" href="../index.html">StarLet Squad</a>
-<nav><a href="../index.html#flagships">Флагманы</a><a href="../index.html#ecosystem">Экосистема</a><a href="../open.html">Открытые проекты</a><a href="../about.html">О проекте</a></nav>
+<nav><a href="../index.html#flagships">Флагманы</a><a href="../index.html#ecosystem">Экосистема</a><a href="../open.html">Открытые проекты</a><a href="../about.html">О проекте</a><a class="lang" href="../en/projects/alphaemu.html" hreflang="en" lang="en">English</a></nav>
 </div></header>
 <main class="wrap">
 <p class="crumb"><a href="../index.html">Главная</a> / AlphaEmu</p>
@@ -24,7 +26,7 @@
 <tr><th>Версия</th><td>1.00.47 (последний собранный комплект)</td></tr>
 <tr><th>Статус</th><td>Активная разработка</td></tr>
 <tr><th>Платформы</th><td>Linux x86-64 (с JIT); aarch64 (интерпретатор)</td></tr>
-<tr><th>Лицензия</th><td>уточняется</td></tr>
+<tr><th>Лицензия</th><td>лицензия уточняется</td></tr>
 <tr><th>Для кого</th><td>Тем, кто хочет запускать OpenVMS Alpha без железа: энтузиастам, разработчикам и сопровождающим старого ПО.</td></tr>
 </table>
 <h2>Что это</h2><p>AlphaEmu - системный эмулятор DEC Alpha EV6 (21264) с чипсетом Tsunami 21272, написанный на C. OpenVMS V8.3 Alpha загружается на нём без изменений: с диска IDE или SCSI, с компакт-диска, по сети (MOP). Гость работает в сети, в VMScluster, с DECwindows, на одном-четырёх процессорах.</p><p>Прошивка DEC не нужна: по умолчанию машину ведут собственная консоль эмулятора (приглашение P00&gt;&gt;&gt;) и собственный PALcode OpenVMS, написанный на C. Консоль SRM остаётся как вариант.</p><p>Смоделированы: IDE и SCSI-диски (NCR 53C810, QLogic ISP1040), лента TZ89, сетевые адаптеры DE500, Intel 82540EM и DEGXA-TA. Есть чекпойнты всей машины, SMP с потоком хоста на каждый vCPU и JIT гостевого кода в x86-64.</p>

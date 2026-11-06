@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="description" content="Self-extracting kits for OpenVMS: one .BCK file becomes one .EXE program.">
+<title>yaDCX - StarLet Squad</title>
+<link rel="alternate" hreflang="ru" href="../../projects/yadcx.html">
+<link rel="alternate" hreflang="en" href="../../en/projects/yadcx.html">
+<link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+<header class="top"><div class="wrap">
+<a class="brand" href="../../en/index.html">StarLet Squad</a>
+<nav><a href="../../en/index.html#flagships">Flagships</a><a href="../../en/index.html#ecosystem">Ecosystem</a><a href="../../en/open.html">Open projects</a><a href="../../en/about.html">About</a><a class="lang" href="../../projects/yadcx.html" hreflang="ru" lang="ru">Русский</a></nav>
+</div></header>
+<main class="wrap">
+<p class="crumb"><a href="../index.html">Home</a> / yaDCX</p>
+<section class="hero" style="padding-top:20px">
+<div><span class="tag">ecosystem</span> <span class="tag">OpenVMS</span></div>
+<h1>yaDCX</h1>
+<p>Self-extracting kits for OpenVMS: one .BCK file becomes one .EXE program.</p>
+</section>
+<table>
+<tr><th>Version</th><td>X-02-00ECO01</td></tr>
+<tr><th>Status</th><td>Maintained</td></tr>
+<tr><th>Platforms</th><td>OpenVMS Alpha and I64</td></tr>
+<tr><th>Licence</th><td>Apache License 2.0</td></tr>
+<tr><th>For whom</th><td>Those who move BACKUP kits between OpenVMS systems by FTP, mail or USB.</td></tr>
+</table>
+<h2>What it is</h2><p>A .BCK file loses its record attributes when passed through FTP, mail or a web server. A Fixed 512 .EXE passes intact, and the saveset attributes travel inside. The data is compressed by the standard DCX routines; a CRC-32 is checked before writing and a second CRC-32 after unpacking. A kit can be checked on Linux too (tools/yadcx_check.py).</p>
+<h2>Why</h2><p>Reliable delivery of software kits to any OpenVMS system with no extra programs.</p>
+<h2>Quick start <small class="tag">Building a kit</small></h2>
+<pre><code>$ BACKUP [MYAPP...]*.* MYAPP.BCK/SAVE_SET
+$ YADCX MYAPP.BCK            ! creates MYAPP.EXE
+$ YADCX /LIST MYAPP.EXE      ! show and check the kit</code></pre>
+<p class="src">Source: yaDCX/README.md</p>
+<h2>Download</h2><p>Releases by tag; where they are published is to be announced.</p>
+<h2>Source and links</h2><ul><li><a href="https://codeberg.org/SysManOne/yaDCX">Source (Codeberg)</a></li></ul>
+
+</main>
+<footer><div class="wrap">Freeware projects of StarLet Squad and Ruslan R. Laishev (AKA: BadAss SysMan). All product names belong to their owners. <a href="../../en/about.html">Terms and feedback</a>.</div></footer>
+</body>
+</html>

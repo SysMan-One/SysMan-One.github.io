@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="color-scheme" content="light dark">
-<title>404 - страница не найдена</title>
+<title>404 - страница не найдена / page not found</title>
 <style>
 :root{--bg:#f7f6f2;--fg:#1c1b19;--ac:#0b5cad}
 @media (prefers-color-scheme:dark){:root{--bg:#14161a;--fg:#e8e6e1;--ac:#6cb0ff}}
@@ -9,10 +9,11 @@ body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.6 system-ui,sans-
 h1{font-size:4rem;margin:0}a{color:var(--ac)}
 </style></head><body><main>
 <h1>404</h1><p>Такой страницы нет. <span lang="en">Page not found.</span></p>
-<p><a id="home" href="/">На главную</a></p>
+<p><a id="home" href="/">На главную</a> · <a id="home_en" href="/en/" lang="en">Home</a></p>
 </main>
 <script>
 /* SITE_BASE: "/" for a user/organisation site or a custom domain; "/<repo>/" for a project site */
 var SITE_BASE = "/";
 document.getElementById("home").href = SITE_BASE + "index.html";
+document.getElementById("home_en").href = SITE_BASE + "en/index.html";
 </script></body></html>

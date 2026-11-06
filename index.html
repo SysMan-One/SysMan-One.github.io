@@ -4,21 +4,23 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="color-scheme" content="light dark">
-<meta name="description" content="Витрина freeware-проектов: AlphaEmu, BroProxy и экосистема утилит.">
+<meta name="description" content="Витрина freeware-проектов: AlphaEmu, BroProxy, mbus-gw-t2r и экосистема утилит.">
 <title>StarLet Squad - свободные программы</title>
+<link rel="alternate" hreflang="ru" href="index.html">
+<link rel="alternate" hreflang="en" href="en/index.html">
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
 <header class="top"><div class="wrap">
 <a class="brand" href="index.html">StarLet Squad</a>
-<nav><a href="index.html#flagships">Флагманы</a><a href="index.html#ecosystem">Экосистема</a><a href="open.html">Открытые проекты</a><a href="about.html">О проекте</a></nav>
+<nav><a href="index.html#flagships">Флагманы</a><a href="index.html#ecosystem">Экосистема</a><a href="open.html">Открытые проекты</a><a href="about.html">О проекте</a><a class="lang" href="en/index.html" hreflang="en" lang="en">English</a></nav>
 </div></header>
 <main class="wrap">
 <section class="hero">
 <h1>Свободные программы для тех, кто ценит маленькое, понятное и проверяемое.</h1>
-<p>Эмулятор DEC Alpha, на котором загружается OpenVMS, прокси-сервер для маленьких Linux-устройств и экосистема утилит вокруг них: сеть, резервные копии, редакторы, библиотеки. Исходный код открыт, документация по-русски и по-английски.</p>
+<p>Эмулятор DEC Alpha, на котором загружается OpenVMS, прокси-сервер для маленьких Linux-устройств, шлюз MODBUS и экосистема утилит вокруг них: сеть, резервные копии, редакторы, библиотеки. Исходный код открыт, документация по-русски и по-английски.</p>
 </section>
-<h2 id="flagships">Флагманы <small class="tag">flagships</small></h2>
+<h2 id="flagships">Флагманы</h2>
 <div class="flags"><article class="card flag">
 <div><span class="tag flagt">флагман</span> <span class="tag">Эмуляция</span></div>
 <h3><a href="projects/alphaemu.html">AlphaEmu</a></h3>
@@ -32,7 +34,7 @@
 <div class="meta"><span>Активная разработка, выпуски по тегам</span><span>Linux: x86_64, armhf, arm64, mips, mipsel, mips64el; Raspberry Pi, OpenWrt</span><span>Apache License 2.0</span></div>
 <div class="links"><a href="projects/broproxy.html">Подробнее</a></div>
 </article></div>
-<h2 id="ecosystem">Экосистема <small class="tag">ecosystem</small></h2>
+<h2 id="ecosystem">Экосистема</h2>
 <div class="grid"><article class="card">
 <div><span class="tag">Сеть</span> <span class="tag">вокруг BroProxy</span></div>
 <h3><a href="projects/broagent.html">BroAgent</a></h3>
@@ -129,6 +131,12 @@
 <p class="one">Кэширующий DNS-форвардер для встраиваемого роутера: наружу по DoT, DoH, DoQ или обычному UDP/TCP.</p>
 <div class="meta"><span>В разработке</span><span>OpenWrt, NapiLinux (Linux)</span><span>Apache License 2.0</span></div>
 <div class="links"><a href="projects/yadnspxy.html">Подробнее</a></div>
+</article><article class="card">
+<div><span class="tag">Промышленность</span></div>
+<h3><a href="projects/mbus-gw.html">mbus-gw-t2r</a></h3>
+<p class="one">Шлюз MODBUS TCP - RTU для линий RS-485 и RS-232: несколько приборов на линии, несколько TCP-портов на линию, прозрачный режим RAW.</p>
+<div class="meta"><span>Выпущен, развивается</span><span>Linux: amd64, arm64, mipsel, mips64el (.deb); OpenWrt 24.10 и 25.12 (.ipk, .apk); платы NaPi (RK3568J, RK3308)</span><span>Apache License 2.0</span></div>
+<div class="links"><a href="projects/mbus-gw.html">Подробнее</a> <a href="https://github.com/napilab/mbus-gw-t2r">Исходники и Releases (GitHub, NaPi Lab)</a></div>
 </article></div>
 
 </main>
