@@ -23,21 +23,22 @@
 <p>A MODBUS TCP to RTU gateway for RS-485 and RS-232 lines: several devices per line, several TCP ports per line, a transparent RAW mode.</p>
 </section>
 <table>
-<tr><th>Version</th><td>V.01-00 (tag V01.00.0, packages 1.0.0)</td></tr>
+<tr><th>Version</th><td>V.01-01 (tag V01.01.0, packages 1.1.0)</td></tr>
 <tr><th>Status</th><td>Released, evolving</td></tr>
 <tr><th>Platforms</th><td>Linux: amd64, arm64, mipsel, mips64el (.deb); OpenWrt 24.10 and 25.12 (.ipk, .apk); NaPi boards (RK3568J, RK3308)</td></tr>
 <tr><th>Licence</th><td>Apache License 2.0</td></tr>
 <tr><th>For whom</th><td>Industrial automation engineers, those who commission MODBUS devices, and students of industrial programming: the code can be read end to end in an evening.</td></tr>
 </table>
-<h2>What it is</h2><p>The gateway takes MODBUS TCP requests and passes them to the devices on a serial line (MODBUS RTU). The end of a frame is detected by the honest t3.5 silence of the specification, an answer is checked by its CRC16, its length and its match to the request. Line garbage is rejected: the client gets a MODBUS exception, the line is flushed, the next request is served as usual.</p><p>A single process, all the waiting is done by poll() with no background timers: an idle gateway uses practically no CPU. Several TCP ports per line, several lines per process, the RS-485 direction controlled by the kernel, the Time Stamp pseudo device, the RAW mode to pass the bytes of a line over TCP transparently. A binary of about 100 KB that needs nothing but libc. Every error is a coded message (%T2R-E-CRC16ERR, %T2R-E-NOANSWER) with its reason.</p>
+<h2>What it is</h2><p>The gateway takes MODBUS TCP requests and passes them to the devices on a serial line (MODBUS RTU). The end of a frame is detected by the honest t3.5 silence of the specification, an answer is checked by its CRC16, its length and its match to the request. Line garbage is rejected: the client gets a MODBUS exception, the line is flushed, the next request is served as usual.</p><p>A single process, all the waiting is done by poll() with no background timers: an idle gateway uses practically no CPU. Several TCP ports per line, several lines per process, the RS-485 direction controlled by the kernel, the Time Stamp pseudo device, the RAW mode to pass the bytes of a line over TCP transparently. A binary of about 100 KB that needs nothing but libc. Every error is a coded message (%T2R-E-CRC16ERR, %T2R-E-NOANSWER) with its reason.</p><p>Since V.01-01 the kit has the mbus-ctl utility: SHOW CONNECTIONS (the clients with their counters of requests, answers, errors and bytes, /CONTINUOUS to keep the screen updated), SHOW LINES, SHOW GATEWAY, RESET CONNECTIONS (drop a client&#x27;s session), RESTART GATEWAY (check the settings file and restart the gateway with the same PID). It works over a local Unix socket with a binary TLV protocol (StarLet AVProto) and opens nothing to the network; the commands may be abbreviated as in DCL: sho conn /cont, restart gw.</p>
 <h2>Why</h2><p>An alternative to mbusd where efficiency on a small box and clear diagnostics matter. The project is also offered for teaching: the serial line discipline, poll() loops, ring buffers, configuration checks and DEC-style messages - all in a real working tool. It is developed and tested by the NaPi Lab team on NaPi industrial single-board computers.</p>
 <h2>Quick start <small class="tag">Installing a ready-made package</small></h2>
-<pre><code>sudo apt install ./mbusgw-t2r_1.0.0-1_arm64.deb                   # Debian, Ubuntu
+<pre><code>sudo apt install ./mbusgw-t2r_1.1.0-1_arm64.deb                   # Debian, Ubuntu
 sudo nano /opt/mbusgw-t2r/etc/modbus-t2r_settings.conf            # lines and TCP ports
 sudo systemctl enable --now mbusgw-t2r
+sudo mbus-ctl sho conn /cont                                      # who is connected, counters
 
-opkg install ./mbusgw-t2r_1.0.0-r1_mipsel_24kc.ipk                  # OpenWrt 24.10
-apk add --allow-untrusted ./mbusgw-t2r_1.0.0-r1_mipsel_24kc.apk     # OpenWrt 25.12</code></pre>
+opkg install ./mbusgw-t2r_1.1.0-r1_mipsel_24kc.ipk                  # OpenWrt 24.10
+apk add --allow-untrusted ./mbusgw-t2r_1.1.0-r1_mipsel_24kc.apk     # OpenWrt 25.12</code></pre>
 <p class="src">Source: mbus-gw-t2r/README.md; the User Guide - docs/UserGuide_EN.md and the PDF in Releases</p>
 <h2>Download</h2><p>Packages .deb (amd64, arm64, mipsel, mips64el), OpenWrt .ipk and .apk (mips, mipsel, ARM, x86_64), sources and the PDF guides are in <a href="https://github.com/napilab/mbus-gw-t2r/releases">Releases on GitHub</a>.</p>
 <h2>Source and links</h2><ul><li><a href="https://github.com/napilab/mbus-gw-t2r">Source and Releases (GitHub, NaPi Lab)</a></li><li><a href="https://github.com/SysMan-One/mbus-gw-t2r">Source (GitHub)</a></li><li><a href="https://codeberg.org/SysManOne/mbus-gw-t2r">Source (Codeberg)</a></li></ul>
