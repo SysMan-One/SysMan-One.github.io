@@ -23,10 +23,10 @@
 <p>Эмулятор DEC AlphaServer ES40: OpenVMS V8.3 Alpha загружается без изменений.</p>
 </section>
 <table>
-<tr><th>Версия</th><td>1.00.47 (последний собранный комплект)</td></tr>
+<tr><th>Версия</th><td>1.00.55</td></tr>
 <tr><th>Статус</th><td>Активная разработка</td></tr>
 <tr><th>Платформы</th><td>Linux x86-64 (с JIT); aarch64 (интерпретатор)</td></tr>
-<tr><th>Лицензия</th><td>лицензия уточняется</td></tr>
+<tr><th>Лицензия</th><td>Freeware для некоммерческого использования (EULA), только двоичные комплекты</td></tr>
 <tr><th>Для кого</th><td>Тем, кто хочет запускать OpenVMS Alpha без железа: энтузиастам, разработчикам и сопровождающим старого ПО.</td></tr>
 </table>
 <h2>Что это</h2><p>AlphaEmu - системный эмулятор DEC Alpha EV6 (21264) с чипсетом Tsunami 21272, написанный на C. OpenVMS V8.3 Alpha загружается на нём без изменений: с диска IDE или SCSI, с компакт-диска, по сети (MOP). Гость работает в сети, в VMScluster, с DECwindows, на одном-четырёх процессорах.</p><p>Прошивка DEC не нужна: по умолчанию машину ведут собственная консоль эмулятора (приглашение P00&gt;&gt;&gt;) и собственный PALcode OpenVMS, написанный на C. Консоль SRM остаётся как вариант.</p><p>Смоделированы: IDE и SCSI-диски (NCR 53C810, QLogic ISP1040), лента TZ89, сетевые адаптеры DE500, Intel 82540EM и DEGXA-TA. Есть чекпойнты всей машины, SMP с потоком хоста на каждый vCPU и JIT гостевого кода в x86-64.</p>
@@ -37,8 +37,8 @@ make test            # конформанс-тесты модулей, без RO
 taskset -c &lt;ядро&gt; ./alphaemu tools/alphaemu-native.cfg
 telnet 127.0.0.1 4021    # консоль OPA0, если console.port = 4021</code></pre>
 <p class="src">Источник: AlphaEmu/README.md; ключи конфигурации - в User&#x27;s Guide (doc/alphaemu_users_guide.md)</p>
-<h2>Скачать</h2><p>Двоичные комплекты (alphaemu-&lt;rev&gt;-x86_64 / aarch64 .tar.gz + .sha256) собираются командой <code>make binkit</code>. Где они будут выложены - уточняется.</p>
-<h2>Исходники и ссылки</h2><ul><li>Ссылки на исходники уточняются.</li></ul>
+<h2>Скачать</h2><p>Двоичные комплекты для Linux x86_64 и aarch64 (.tar.gz, .sha256, подпись minisign) - в <a href="https://github.com/SysMan-One/yaAlphaEmu/releases">Releases на GitHub</a>; выпуски до 1.00.53 есть и на GitLab.</p>
+<h2>Исходники и ссылки</h2><ul><li><a href="https://github.com/SysMan-One/yaAlphaEmu">Комплекты и Releases (GitHub)</a></li><li><a href="https://github.com/SysMan-One/yaAlphaEmu/releases">Releases</a></li><li><a href="https://gitlab.com/SysMan-One/yaAlphaEmu">Комплекты (GitLab)</a></li></ul>
 
 </main>
 <footer><div class="wrap">Freeware-проекты StarLet Squad и Ruslan R. Laishev (AKA: BadAss SysMan). Все названия продуктов принадлежат их владельцам. <a href="../about.html">Условия и обратная связь</a>.</div></footer>
